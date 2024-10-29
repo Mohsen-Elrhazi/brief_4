@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- links -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- <link rel="stylesheet" href="assets/css/bootstrap.min.css"> -->
+
+    <title>Document</title>
+</head>
+
+<body>
+
+    <navbar class="navbar">
+        <nav class="nav">
+            <div class="logo-contain">
+                <a href="#"><img src="assets/images/daily-tasks.png" alt="..."></a>
+                <h2>Task Scheduler</h2>
+            </div>
+
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Home</a></li>
+                <!-- <li><a href="#">Home</a></li> -->
+            </ul>
+
+            <button>Btn</button>
+        </nav>
+
+    </navbar>
+
+    <section id="main">
+        <div class="contain-form">
+            <form>
+                <div>
+                     <label for="titre">Titre :</label>
+                <input type="text" id="titre" name="titre">
+                </div>
+
+                <div>
+                    <label for="etat">Etat :</label>
+                <!-- <input type="texte" id="etat" name="etat"> -->
+                <select id="etat" name="etat">
+                    <option value="A faire">A faire</option>
+                    <option value="En cours">En cours</option>
+                    <option value="Terminé">Terminé</option>
+                </select>
+                </div>
+               
+                 <div>
+                    <label for="description">Description :</label>
+                <input type="texte" id="description" name="description">
+                 </div>
+                
+                <div><label for="date">Date :</label>
+                <input type="date" id="date" name="date">
+                </div>
+                
+                <button onclick="add()">Add</button>
+            </form>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+    <script src="js/main.js"></script>
+    <!-- <script src="js/bootstrap.bundle.min.js"></script> -->
+</body>
+
+</html>
