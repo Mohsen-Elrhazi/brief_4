@@ -38,51 +38,51 @@
         <div class="contain-form">
             <form id="form">
                 <div>
-                     <label for="titre">Titre :</label>
-                <input type="text" id="titre" name="titre">
+                    <label for="titre">Titre :</label>
+                    <input type="text" id="titre" name="titre">
                 </div>
 
                 <div>
                     <label for="etat">Etat :</label>
-                <!-- <input type="texte" id="etat" name="etat"> -->
-                <select id="etat" name="etat">
-                    <option value="A faire">A faire</option>
-                    <option value="En cours">En cours</option>
-                    <option value="Terminé">Terminé</option>
-                    <option value="En retard">En retard</option>
-                </select>
+                    <!-- <input type="texte" id="etat" name="etat"> -->
+                    <select id="etat" name="etat">
+                        <option value="A faire">A faire</option>
+                        <option value="En cours">En cours</option>
+                        <option value="Terminé">Terminé</option>
+                        <option value="En retard">En retard</option>
+                    </select>
                 </div>
-               
-                 <div>
+
+                <div>
                     <label for="description">Description :</label>
-                <input type="texte" id="description" name="description">
-                 </div>
-                
-                <div><label for="date">Date :</label>
-                <input type="date" id="date" name="date">
+                    <input type="texte" id="description" name="description">
                 </div>
-                
-                
-                <button id="btn-add"  type="button" >Add</button>
+
+                <div><label for="date">Date :</label>
+                    <input type="date" id="date" name="date">
+                </div>
+
+
+                <button id="btn-add" type="button" class="btn btn-success px-4 btn-span-2 ">Add</button>
             </form>
-        
+
         </div>
-        
-          <table id="tableTasks" class="table container table-bordered ">
+
+        <table id="tableTasks" class="table container table-bordered ">
             <thead class="">
-              <tr class=" table-light">
-                <th>Titre</th>
-                <th>Description</th>
-                <th>Etat</th>
-                <th>date</th>
-                <th>Actions</th>
-              </tr>
+                <tr class=" table-light">
+                    <th class="col-2">Titre</th>
+                    <th class="col-3">Description</th>
+                    <th class="col-2">Etat</th>
+                    <th class="col-2">Date</th>
+                    <th class="col-3">Actions</th>
+                </tr>
             </thead>
-              <tbody>
-                
+            <tbody>
+
             </tbody>
         </table>
-        
+
         <script src="js/bootstrap.bundle.min.js"></script>
         <script src="js/main.js"></script>
     </section>
