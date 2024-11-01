@@ -8,14 +8,17 @@ var tabTasks = []
 let btnAdd = document.getElementById("btn-add")
 let editInForm=document.getElementById("edit-form")
 editInForm.style.display="none"
+let btnAnl =document.getElementById('annuler')
 // btnAdd.style.display="block"
 
-let table = document.getElementById('tableTasks')
+let table = document.getElementById('btable')
+tableTasks.style.visibility="hidden"
 let form = document.getElementById('form')
 
 let indexEdit=-1  //indice pour suivre la tachea editer
 
 btnAdd.addEventListener("click", function () {
+    tableTasks.style.visibility="visible"
     let titre = document.getElementById('titre').value
     let descr = document.getElementById('description').value
     let etat = document.getElementById('etat').value
@@ -52,6 +55,20 @@ btnAdd.addEventListener("click", function () {
         cel2.textContent = etat
         cel3.textContent = date
         
+        //creation button Edit
+        let btnEditInTable = document.createElement('button')
+        btnEditInTable.textContent = "Edit"
+        cel4.appendChild(btnEditInTable)
+
+        //creation button Delete
+        let buttonDelete = document.createElement('button')
+        buttonDelete.textContent = "Delete"
+        cel4.appendChild(buttonDelete)
+
+        // design les buttons par les donner les classes de bootstrap
+        btnEditInTable.classList.add("btn", "btn-primary", "px-4", "mx-4")
+        buttonDelete.classList.add("btn", "btn-danger", "px-3", "mx-4")
+        
         //coloré la ligne selon l'etat de latache 
         switch(etat){
             case "A faire":  newRow.classList.add("table", "table-success")
@@ -63,30 +80,24 @@ btnAdd.addEventListener("click", function () {
             case "En retard":  newRow.classList.add("table", "table-danger")
                 break;
         }
-
-
-        //creation button Edit
-        let editInTable = document.createElement('button')
-        editInTable.textContent = "Edit"
-        cel4.appendChild(editInTable)
-
-        //creation button Delete
-        let buttonDelete = document.createElement('button')
-        buttonDelete.textContent = "Delete"
-        cel4.appendChild(buttonDelete)
-
-        // design les button par les donner les classes de bootstrap
-        editInTable.classList.add("btn", "btn-primary", "px-4", "mx-4")
-        buttonDelete.classList.add("btn", "btn-danger", "px-3", "mx-4")
-
+        
         //vider le contenu des input de form
         form.reset()
 
-        
+        //fonction anuler
+        btnAnl.addEventListener("click",function(){
+            form.reset()
+            btnAdd.style.display="block"
+            editInForm.style.display="none"
+        })
+
         //fonction delete
         buttonDelete.addEventListener("click", function () {
 
             newRow.remove();
+            if (table.getElementsByTagName('tr').length <1) { 
+                tableTasks.style.visibility = "hidden";
+            }
 
             //supprimer la tache de la table tasks
             tabTasks.splice(tabTasks.indexOf(tasks), 1);
@@ -96,7 +107,7 @@ btnAdd.addEventListener("click", function () {
         
 
          //function button edit qui est dans la table 
-         editInTable.addEventListener("click",function(){
+         btnEditInTable.addEventListener("click",function(){
         //masquer le bouton add et afficher le bouton edit dans la form
         btnAdd.style.display="none"
         editInForm.style.display="block"
@@ -108,10 +119,6 @@ btnAdd.addEventListener("click", function () {
 
          // Sauvegarder l'index de la tâche pour mise à jour
          currentEditIndex = Array.from(table.rows).indexOf(newRow);
-
-        
-       
-
 
        })
     }
@@ -169,6 +176,9 @@ editInForm.addEventListener("click", function () {
         btnAdd.style.display = "inline";
         editInForm.style.display = "none";
         currentEditIndex = -1;
+
+         btnAdd.style.display="block"
+        editInForm.style.display="none"
     }
 });
 

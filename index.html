@@ -45,7 +45,7 @@
                 <div>
                     <label for="etat">Etat :</label>
                     <select id="etat" name="etat">
-                        <option value="A faire">A faire</option>
+                        <option value="A faire">A faire </option>
                         <option value="En cours">En cours</option>
                         <option value="Terminé">Terminé</option>
                         <option value="En retard">En retard</option>
@@ -60,10 +60,11 @@
                 <div><label for="date">Date :</label>
                     <input type="date" id="date" name="date">
                 </div>
-
-
-                <button id="btn-add" type="button" class="btn btn-success px-5 btn-span-2 fs-4 ">Add</button>
-                <button id="edit-form" type="button" class="btn btn-primary btn-span-2 px-5  fs-4">Edit</button>
+                <div class="form-buttons">
+                    <button id="btn-add" type="button" class="btn btn-success btnForm  w-btn fs-4 ">Add</button>
+                    <button id="edit-form" type="button" class="btn btn-primary btnForm  w-btn fs-4">Edit</button>
+                    <button id="annuler" type="button" class="btn btn-secondary   btnForm w-btn  fs-4">Annuler</button>
+                </div>
             </form>
 
         </div>
@@ -78,7 +79,7 @@
                     <th class="col-3">Actions</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody id="btable">
 
             </tbody>
         </table>

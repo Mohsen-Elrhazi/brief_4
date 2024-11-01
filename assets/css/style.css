@@ -64,9 +64,7 @@ ul li a {
 
 }
 
-/* .navabr .nav h2{
-    
-} */
+
 
 
 .navbar .nav button {
@@ -82,7 +80,7 @@ ul li a {
 
 /* form */
 #main .contain-form {
-    width: 60%;
+    width: 88%;
     height: auto;
     margin: 80px auto;
     padding:40px;
@@ -97,21 +95,6 @@ ul li a {
     /* grid-template-rows:repeat(3,1fr); */
     gap:50px;
 }
-
-
-
-/* .contain-form form input{
- padding:12px 40px;
-
-}
-
-.contain-form form #etat,
-.contain-form form #date
-{
-    width:300px;
-    height:50px;
-    text-align:center
-} */
 
 .contain-form label {
     display: block; 
@@ -129,33 +112,13 @@ ul li a {
     border-radius: 4px;
 }
 
-/* .contain-form button{
-    padding:12px 50px;
-    border-radius:6px;
-    border:none;
-    background-color:#008000;
-    color:#fff;
-    font-size:1.2rem;
-    margin:0 auto;
-    grid-column:span 2; */
-    /* cursor:pointer;
-    transition:background-color .2s ease;
-   } */
-
-   /* .contain-form button:hover{
-    background-color:#086708
-   } */
-
-.btn-span-2{
-    grid-column:span 2;
-    /* width:200px; */
-    padding:14px 60px;
-
-    margin:auto;
-    /* padding:12px 50px; */
-
+.form-buttons{
+  grid-column:span 2;
+  display:flex;
+  justify-content:center;
+  gap:100px;
 }
 
-/* .btn-edit{
-    background-color: #0d6efd;
-} */
+.w-btn{
+   width:14rem;
+}
